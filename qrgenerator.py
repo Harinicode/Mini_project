@@ -10,14 +10,14 @@ root.resizable(False,False)
 
 #icon image
  
-image_icon=PhotoImage(file="icon.png")
-root.iconphoto(False,image_icon)
+image_icon=PhotoImage(file="icon.png")                                                     #copy the youtube.png and rename it as icon outside
+root.iconphoto(False,image_icon)                                                           #top left youtube icon created
 
 def generate():
     name=title.get()
     text=entry.get()
     qr=qrcode.make(text)
-    qr.save("Qrcode/"+ str(name)+".png")
+    qr.save("Qrcode/"+ str(name)+".png")                                                    #file name and the path
 
     global Image
     Image=PhotoImage(file="Qrcode/"+ str(name)+".png")
